@@ -29,7 +29,7 @@ const CreateHomes = ({ data }) =>
       <div className="flex flex-col gap-2 font-montserrat" key={home?.title}>
         <Image
           image={home?.photo}
-          className={"max-h-72 md:max-h-60 lg:max-h-[13rem] h-full rounded-3xl"}
+          className={"max-h-72 md:max-h-60 lg:max-h-[15rem] h-full rounded-3xl"}
           alt={home?.title}
         />
         <div className="flex justify-between items-center">
@@ -103,12 +103,14 @@ function App() {
   const [noOfGuest, setNoOFGuest] = useState("Add guests");
   const Error = useRef();
   const btnGuestRef = useRef();
+  const page = useRef();
+  const searchMenuRef = useRef();
 
   useEffect(() => {
     return Number(noOfGuest.split(" ")[0]) > 0
       ? changeColor(btnGuestRef, "dark")
       : changeColor(btnGuestRef, "light");
-  }, [noOfGuest]);
+  });
 
   //* filter data
   const searchForHomes = ({ Number, location, NoOfGuest }) => {
@@ -167,7 +169,6 @@ function App() {
     const [stays, setNoOfStays] = useState(0);
     const GuestButtonRef = useRef();
     const LocationButtonRef = useRef();
-    const searchMenuRef = useRef();
 
     /* #endregion */
 
@@ -428,7 +429,11 @@ function App() {
   };
 
   return (
-    <div className="mx-4 md:mx-8 lg:mx-12 xl:mx-12 my-4 md:my-8">
+    <div
+      className="mx-4 md:mx-8 lg:mx-12 xl:mx-12 my-4 md:my-8"
+      ref={page}
+      id="page"
+    >
       {/* header */}
       <Search />
       <header className="flex justify-between flex-col md:flex-row gap-8 md:gap-0">
@@ -473,7 +478,7 @@ function App() {
         </article>
         {/* houses */}
         <article
-          className="mt-6 md:mt-8 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6  auto-rows-[minmax(0,_1fr)]"
+          className="mt-6 md:mt-8 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 xl:gap-10 auto-rows-[minmax(0,_1fr)]"
           id="main-article"
         >
           <CreateHomes data={filteredData} />
