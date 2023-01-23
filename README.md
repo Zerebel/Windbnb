@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://zerebel.github.io/Windbnb/">
+    <a href="https://zerebel-windbnb.netlify.app/">
       Demo
     </a>
     <span> | </span>
