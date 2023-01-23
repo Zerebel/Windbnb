@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://zerebel.github.io/Windbnb/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://devchallenges.io/solutions/CZ1kFrzYHyWkFb9OLu9N">
       Solution
     </a>
     <span> | </span>
@@ -37,8 +37,7 @@
 
 ## Overview
 
-![screenshot]
-
+![screenshot](assets/screenshot.png)
 
 ### Built With
 
@@ -82,4 +81,4 @@ $ npm start
 ## Contact
 
 - GitHub [@Zerebel](https://github.com/zerebel)
-- Twitter [@Zerebel_](https://twitter.com/zerebel_)
+- Twitter [@Zerebel\_](https://twitter.com/zerebel_)
